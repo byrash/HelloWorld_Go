@@ -35,7 +35,31 @@ func main() {
 			zipCode: 94000,
 		},
 	}
+	jimPointer := &jim
+	// fmt.Println(jimPointer)
+	jimPointer.updateName("Jimmy")
+	// jim.updateName("test")
 	jim.print()
+
+	mySlice := []string{"test", "again"}
+	updateSlice(mySlice)
+	fmt.Println(mySlice)
+}
+
+/*
+Slices can be changed without pointers
+*/
+func updateSlice(s []string) {
+	s[0] = "test changed"
+}
+
+//Non pointer version which wont work
+// func (p person) updateName(newFirstName string) {
+// 	p.firstName = newFirstName
+// }
+func (p *person) updateName(newFirstName string) {
+	// (*p).firstName = newFirstName
+	p.firstName = newFirstName
 }
 
 func (p person) print() {
