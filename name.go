@@ -5,5 +5,7 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello Shivaji")
+	var message string
+	message = "Hello Shivaji!!!"
+	fmt.Println(message)
 }
