@@ -11,7 +11,20 @@ const (
 )
 
 func main() {
-	funcReturnTest()
+	pointersTest()
+}
+
+func pointersTest() {
+	x := 10
+	fmt.Println(&x)
+	changeIt(&x)
+	fmt.Println(x)
+}
+
+func changeIt(x *int) {
+	fmt.Println(&x)
+	fmt.Println("Recived x", *x)
+	*x = 9999
 }
 
 func funcReturnTest() {
