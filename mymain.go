@@ -11,7 +11,26 @@ const (
 )
 
 func main() {
-	pointersTest()
+	switchTest(10)
+	switchTest("shivaji")
+	switchTest('x')
+}
+
+func switchTest(x interface{}) {
+	switch x.(type) {
+	case int:
+		fmt.Println("int")
+	case string:
+		fmt.Println("String")
+	default:
+		fmt.Printf("%T ", x)
+	}
+}
+
+func charsFromNo() {
+	for i := 0; i < 140; i++ {
+		fmt.Println(i, " -> ", string(i), " --> ", []byte(string(i)))
+	}
 }
 
 func pointersTest() {
