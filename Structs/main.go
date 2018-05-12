@@ -36,7 +36,7 @@ func main() {
 		},
 	}
 	jimPointer := &jim
-	// fmt.Println(jimPointer)
+	fmt.Println(jimPointer)
 	jimPointer.updateName("Jimmy")
 	// jim.updateName("test")
 	jim.print()
@@ -57,6 +57,8 @@ func updateSlice(s []string) {
 // func (p person) updateName(newFirstName string) {
 // 	p.firstName = newFirstName
 // }
+//Slices, maps, channels, strings, function values, and interface values are implemented with pointers internally, and a pointer to them is often redundant.
+//Using * can work both for object & pointer
 func (p *person) updateName(newFirstName string) {
 	// (*p).firstName = newFirstName
 	p.firstName = newFirstName
