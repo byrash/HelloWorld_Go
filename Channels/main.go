@@ -29,7 +29,7 @@ func main() {
 		go func(link string) {
 			time.Sleep(time.Second * 5)
 			checkLink(link, c)
-		}(l)
+		}(l) // l from range chancel is being passed here
 	}
 }
 
