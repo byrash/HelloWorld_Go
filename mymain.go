@@ -10,10 +10,11 @@ const (
 	x = iota
 )
 
-func main() {
-	switchTest(10)
-	switchTest("shivaji")
-	switchTest('x')
+func main1() {
+	// switchTest(10)
+	// switchTest("shivaji")
+	// switchTest('x')
+	ReflectTest()
 }
 
 func switchTest(x interface{}) {
